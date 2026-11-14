@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина билетов - TicketShow</title>
+</head>
+<body>
+    <header>
+        <h1>TicketShow</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Афиша</a></li>
+                <li><a href="collection.html">Мои билеты (Корзина)</a></li>
+                <li><a href="checkout.html">Оформление заказа</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Ваша корзина билетов</h2>
+            <!-- Сложная HTML-таблица по требованиям варианта -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Наименование (Концерт, Дата)</th>
+                        <th>Сектор, Ряд, Место</th>
+                        <th>Количество</th>
+                        <th>Цена за ед.</th>
+                        <th>Итого</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Симфонический оркестр (15.11.2026)</td>
+                        <td>Партер, Ряд 5, Место 12</td>
+                        <td>1</td>
+                        <td>2500 руб.</td>
+                        <td>2500 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Симфонический оркестр (15.11.2026)</td>
+                        <td>Партер, Ряд 5, Место 13</td>
+                        <td>1</td>
+                        <td>2500 руб.</td>
+                        <td>2500 руб.</td>
+                    </tr>
+                </tbody>
+                <!-- Подвал таблицы с итоговой стоимостью -->
+                <tfoot>
+                    <tr>
+                        <!-- Объединение ячеек colspan="3" согласно заданию -->
+                        <td colspan="3">Общая стоимость заказа:</td>
+                        <td colspan="2">5000 руб.</td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <br>
+            <a href="checkout.html">Перейти к оформлению</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TicketShow. Все права защищены.</p>
+    </footer>
+</body>
+</html>

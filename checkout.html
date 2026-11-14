@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление билета - TicketShow</title>
+</head>
+<body>
+    <header>
+        <h1>TicketShow</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Афиша</a></li>
+                <li><a href="collection.html">Мои билеты (Корзина)</a></li>
+                <li><a href="checkout.html">Оформление заказа</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Оформление билета</h2>
+            <!-- Форма с различными типами input, select, textarea и HTML5 валидацией -->
+            <form action="/submit-order" method="POST">
+                
+                <!-- 1. Text -->
+                <div>
+                    <label for="fullName">ФИО зрителя:</label>
+                    <input type="text" id="fullName" name="fullName" required minlength="5" placeholder="Иванов Иван Иванович">
+                </div>
+                <br>
+
+                <!-- 2. Email -->
+                <div>
+                    <label for="emailAddr">Email для отправки билета:</label>
+                    <input type="email" id="emailAddr" name="emailAddr" required placeholder="example@mail.ru">
+                </div>
+                <br>
+
+                <!-- 3. Tel -->
+                <div>
+                    <label for="phone">Контактный телефон:</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{11}" placeholder="89001234567">
+                </div>
+                <br>
+
+                <!-- 4. Select -->
+                <div>
+                    <label for="deliveryMethod">Способ получения:</label>
+                    <select id="deliveryMethod" name="deliveryMethod" required>
+                        <option value="">-- Выберите способ --</option>
+                        <option value="electronic">Электронный билет</option>
+                        <option value="box_office">В кассе</option>
+                    </select>
+                </div>
+                <br>
+
+                <!-- 5. Textarea -->
+                <div>
+                    <label for="comments">Комментарий к заказу:</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="40" maxlength="300" placeholder="Напишите ваши пожелания..."></textarea>
+                </div>
+                <br>
+
+                <!-- 6. Radio -->
+                <div>
+                    <p>Способ оплаты:</p>
+                    <input type="radio" id="payCard" name="paymentMethod" value="card" required>
+                    <label for="payCard">Банковской картой онлайн</label>
+                    <br>
+                    <input type="radio" id="paySbp" name="paymentMethod" value="sbp" required>
+                    <label for="paySbp">Через СБП</label>
+                </div>
+                <br>
+
+                <!-- 7. Checkbox -->
+                <div>
+                    <input type="checkbox" id="rulesAccept" name="rulesAccept" required>
+                    <label for="rulesAccept">Я согласен с правилами возврата билетов</label>
+                </div>
+                <br>
+
+                <!-- Кнопка отправки -->
+                <div>
+                    <button type="submit">Оформить заказ</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TicketShow. Все права защищены.</p>
+    </footer>
+</body>
+</html>
