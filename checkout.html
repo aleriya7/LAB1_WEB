@@ -4,93 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оформление билета - TicketShow</title>
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
-<body>
-    <header>
-        <h1>TicketShow</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Афиша</a></li>
-                <li><a href="collection.html">Мои билеты (Корзина)</a></li>
-                <li><a href="checkout.html">Оформление заказа</a></li>
+<body class="page">
+    <header class="header">
+        <h1 class="header__title">TicketShow</h1>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="catalog.html">Афиша</a></li>
+                <li class="nav__item"><a class="nav__link" href="collection.html">Мои билеты (Корзина)</a></li>
+                <li class="nav__item"><a class="nav__link" href="checkout.html">Оформление заказа</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Оформление билета</h2>
-            <!-- Форма с различными типами input, select, textarea и HTML5 валидацией -->
-            <form action="/submit-order" method="POST">
-                
-                <!-- 1. Text -->
-                <div>
-                    <label for="fullName">ФИО зрителя:</label>
-                    <input type="text" id="fullName" name="fullName" required minlength="5" placeholder="Иванов Иван Иванович">
-                </div>
-                <br>
+    <main class="main">
+        <section class="checkout">
+            <h2 class="checkout__title">Оформление билета</h2>
 
-                <!-- 2. Email -->
-                <div>
-                    <label for="emailAddr">Email для отправки билета:</label>
-                    <input type="email" id="emailAddr" name="emailAddr" required placeholder="example@mail.ru">
-                </div>
-                <br>
+            <form class="form" action="/submit-order" method="POST">
 
-                <!-- 3. Tel -->
-                <div>
-                    <label for="phone">Контактный телефон:</label>
-                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{11}" placeholder="89001234567">
+                <!-- ФИО -->
+                <div class="form__field">
+                    <label class="form__label" for="fullName">ФИО зрителя:</label>
+                    <input class="form__input" type="text" id="fullName" name="fullName" required minlength="5" placeholder="Иванов Иван Иванович">
                 </div>
-                <br>
 
-                <!-- 4. Select -->
-                <div>
-                    <label for="deliveryMethod">Способ получения:</label>
-                    <select id="deliveryMethod" name="deliveryMethod" required>
+                <!-- Email -->
+                <div class="form__field">
+                    <label class="form__label" for="emailAddr">Email для отправки билета:</label>
+                    <input class="form__input" type="email" id="emailAddr" name="emailAddr" required placeholder="example@mail.ru">
+                </div>
+
+                <!-- Телефон -->
+                <div class="form__field">
+                    <label class="form__label" for="phone">Контактный телефон:</label>
+                    <input class="form__input" type="tel" id="phone" name="phone" required pattern="[0-9]{11}" placeholder="89001234567">
+                </div>
+
+                <!-- Способ получения -->
+                <div class="form__field">
+                    <label class="form__label" for="deliveryMethod">Способ получения:</label>
+                    <select class="form__select" id="deliveryMethod" name="deliveryMethod" required>
                         <option value="">-- Выберите способ --</option>
                         <option value="electronic">Электронный билет</option>
                         <option value="box_office">В кассе</option>
                     </select>
                 </div>
-                <br>
 
-                <!-- 5. Textarea -->
-                <div>
-                    <label for="comments">Комментарий к заказу:</label><br>
-                    <textarea id="comments" name="comments" rows="4" cols="40" maxlength="300" placeholder="Напишите ваши пожелания..."></textarea>
+                <!-- Комментарий -->
+                <div class="form__field">
+                    <label class="form__label" for="comments">Комментарий к заказу:</label>
+                    <textarea class="form__textarea" id="comments" name="comments" rows="4" maxlength="300" placeholder="Напишите ваши пожелания..."></textarea>
                 </div>
-                <br>
 
-                <!-- 6. Radio -->
-                <div>
-                    <p>Способ оплаты:</p>
-                    <input type="radio" id="payCard" name="paymentMethod" value="card" required>
-                    <label for="payCard">Банковской картой онлайн</label>
-                    <br>
-                    <input type="radio" id="paySbp" name="paymentMethod" value="sbp" required>
-                    <label for="paySbp">Через СБП</label>
+                <!-- Способ оплаты -->
+                <div class="form__radio-group">
+                    <p class="form__radio-title">Способ оплаты:</p>
+                    <label class="form__radio-item">
+                        <input type="radio" id="payCard" name="paymentMethod" value="card" required>
+                        Банковской картой онлайн
+                    </label>
+                    <label class="form__radio-item">
+                        <input type="radio" id="paySbp" name="paymentMethod" value="sbp" required>
+                        Через СБП
+                    </label>
                 </div>
-                <br>
 
-                <!-- 7. Checkbox -->
-                <div>
-                    <input type="checkbox" id="rulesAccept" name="rulesAccept" required>
-                    <label for="rulesAccept">Я согласен с правилами возврата билетов</label>
+                <!-- Согласие -->
+                <div class="form__checkbox-item">
+                    <label>
+                        <input type="checkbox" id="rulesAccept" name="rulesAccept" required>
+                        Я согласен с правилами возврата билетов
+                    </label>
                 </div>
-                <br>
 
-                <!-- Кнопка отправки -->
-                <div>
-                    <button type="submit">Оформить заказ</button>
-                </div>
+                <!-- Кнопка: микс .button + .form__submit -->
+                <button class="button button--primary form__submit" type="submit">Оформить заказ</button>
             </form>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 TicketShow. Все права защищены.</p>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2026 TicketShow. Все права защищены.</p>
     </footer>
 </body>
 </html>

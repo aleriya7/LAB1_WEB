@@ -4,67 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Корзина билетов - TicketShow</title>
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
-<body>
-    <header>
-        <h1>TicketShow</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Афиша</a></li>
-                <li><a href="collection.html">Мои билеты (Корзина)</a></li>
-                <li><a href="checkout.html">Оформление заказа</a></li>
+<!-- Модификатор страницы: добавляем отступ снизу под фиксированную панель -->
+<body class="page page--with-cart-summary">
+    <header class="header">
+        <h1 class="header__title">TicketShow</h1>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="catalog.html">Афиша</a></li>
+                <li class="nav__item"><a class="nav__link" href="collection.html">Мои билеты (Корзина)</a></li>
+                <li class="nav__item"><a class="nav__link" href="checkout.html">Оформление заказа</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Ваша корзина билетов</h2>
-            <!-- Сложная HTML-таблица по требованиям варианта -->
-            <table border="1">
+    <main class="main">
+        <section class="cart">
+            <h2 class="cart__title">Ваша корзина билетов</h2>
+
+            <table class="cart__table">
                 <thead>
-                    <tr>
-                        <th>Наименование (Концерт, Дата)</th>
-                        <th>Сектор, Ряд, Место</th>
-                        <th>Количество</th>
-                        <th>Цена за ед.</th>
-                        <th>Итого</th>
+                    <tr class="cart__row">
+                        <th class="cart__head-cell">Наименование (Концерт, Дата)</th>
+                        <th class="cart__head-cell">Сектор, Ряд, Место</th>
+                        <th class="cart__head-cell">Количество</th>
+                        <th class="cart__head-cell">Цена за ед.</th>
+                        <th class="cart__head-cell">Итого</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Симфонический оркестр (15.11.2026)</td>
-                        <td>Партер, Ряд 5, Место 12</td>
-                        <td>1</td>
-                        <td>2500 руб.</td>
-                        <td>2500 руб.</td>
+                    <tr class="cart__row">
+                        <td class="cart__cell">Симфонический оркестр (15.11.2026)</td>
+                        <td class="cart__cell">Партер, Ряд 5, Место 12</td>
+                        <td class="cart__cell">1</td>
+                        <td class="cart__cell">2500 руб.</td>
+                        <td class="cart__cell">2500 руб.</td>
                     </tr>
-                    <tr>
-                        <td>Симфонический оркестр (15.11.2026)</td>
-                        <td>Партер, Ряд 5, Место 13</td>
-                        <td>1</td>
-                        <td>2500 руб.</td>
-                        <td>2500 руб.</td>
+                    <tr class="cart__row">
+                        <td class="cart__cell">Симфонический оркестр (15.11.2026)</td>
+                        <td class="cart__cell">Партер, Ряд 5, Место 13</td>
+                        <td class="cart__cell">1</td>
+                        <td class="cart__cell">2500 руб.</td>
+                        <td class="cart__cell">2500 руб.</td>
                     </tr>
                 </tbody>
-                <!-- Подвал таблицы с итоговой стоимостью -->
                 <tfoot>
-                    <tr>
-                        <!-- Объединение ячеек colspan="3" согласно заданию -->
-                        <td colspan="3">Общая стоимость заказа:</td>
-                        <td colspan="2">5000 руб.</td>
+                    <tr class="cart__row">
+                        <td class="cart__foot-cell" colspan="3">Общая стоимость заказа:</td>
+                        <td class="cart__foot-cell" colspan="2">5000 руб.</td>
                     </tr>
                 </tfoot>
             </table>
-            
-            <br>
-            <a href="checkout.html">Перейти к оформлению</a>
+
+            <a class="button button--primary" href="checkout.html">Перейти к оформлению</a>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 TicketShow. Все права защищены.</p>
+    <!-- ВАРИАНТ 9: фиксированная панель с итоговой суммой -->
+    <div class="cart-summary">
+        <p class="cart-summary__text">Итого: 5000 руб.</p>
+        <a class="button button--primary" href="checkout.html">Оформить заказ</a>
+    </div>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2026 TicketShow. Все права защищены.</p>
     </footer>
 </body>
 </html>

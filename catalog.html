@@ -4,46 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Афиша - TicketShow</title>
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
-<body>
-    <header>
-        <h1>TicketShow — Афиша мероприятий</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Афиша</a></li>
-                <li><a href="collection.html">Мои билеты (Корзина)</a></li>
-                <li><a href="checkout.html">Оформление заказа</a></li>
+<body class="page">
+    <header class="header">
+        <h1 class="header__title">TicketShow — Афиша мероприятий</h1>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="catalog.html">Афиша</a></li>
+                <li class="nav__item"><a class="nav__link" href="collection.html">Мои билеты (Корзина)</a></li>
+                <li class="nav__item"><a class="nav__link" href="checkout.html">Оформление заказа</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Концерты в этом месяце</h2>
-            
-            <article>
-                <h3>Симфонический оркестр: Музыка из кинофильмов</h3>
-                <!-- Осмысленный alt у картинки -->
-                <img src="https://via.placeholder.com/300x200" alt="Выступление симфонического оркестра на сцене">
-                <p>Дата: 15 ноября 2026</p>
-                <p>Жанр: Классика / Саундтреки</p>
-                <!-- Переход на детальную страницу -->
-                <a href="detail.html">Подробнее и купить билет</a>
+    <main class="main">
+        <section class="catalog">
+            <h2 class="catalog__title">Концерты в этом месяце</h2>
+
+            <!-- Обычная карточка мероприятия -->
+            <article class="event-card">
+                <div class="event-card__image-wrapper">
+                    <img class="event-card__image" src="https://via.placeholder.com/300x200" alt="Выступление симфонического оркестра на сцене">
+                </div>
+                <h3 class="event-card__title">Симфонический оркестр: Музыка из кинофильмов</h3>
+                <p class="event-card__info">Дата: 15 ноября 2026</p>
+                <p class="event-card__info">Жанр: Классика / Саундтреки</p>
+                <a class="button button--primary event-card__link" href="detail.html">Подробнее и купить билет</a>
             </article>
 
-            <article>
-                <h3>Группа "Нервы" - Большой сольный концерт</h3>
-                <img src="https://via.placeholder.com/300x200" alt="Рок-группа выступает перед большой аудиторией">
-                <p>Дата: 22 ноября 2026</p>
-                <p>Жанр: Рок / Альтернатива</p>
-                <a href="detail.html">Подробнее и купить билет</a>
+            <!-- Распроданная карточка: модификатор --sold-out + overlay «Билетов нет» -->
+            <article class="event-card event-card--sold-out">
+                <div class="event-card__image-wrapper">
+                    <img class="event-card__image" src="https://via.placeholder.com/300x200" alt="Рок-группа выступает перед большой аудиторией">
+                    <!-- Вариант 9: полупрозрачный слой 100%×100% -->
+                    <div class="event-card__overlay">
+                        <span class="event-card__overlay-text">Билетов нет</span>
+                    </div>
+                </div>
+                <h3 class="event-card__title">Группа "Нервы" - Большой сольный концерт</h3>
+                <p class="event-card__info">Дата: 22 ноября 2026</p>
+                <p class="event-card__info">Жанр: Рок / Альтернатива</p>
+                <a class="button button--primary event-card__link" href="detail.html">Подробнее</a>
             </article>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 TicketShow. Все права защищены.</p>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2026 TicketShow. Все права защищены.</p>
     </footer>
 </body>
 </html>

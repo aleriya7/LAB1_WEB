@@ -4,52 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная - TicketShow</title>
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
-<body>
-    <!-- Глобальная шапка сайта -->
-    <header>
-        <h1>TicketShow — Билеты на лучшие концерты</h1>
-        <!-- Навигация по страницам -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Афиша</a></li>
-                <li><a href="collection.html">Мои билеты (Корзина)</a></li>
-                <li><a href="checkout.html">Оформление заказа</a></li>
+<body class="page">
+    <!-- Блок: header -->
+    <header class="header">
+        <h1 class="header__title">TicketShow — Билеты на лучшие концерты</h1>
+        <!-- Блок: nav -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="catalog.html">Афиша</a></li>
+                <li class="nav__item"><a class="nav__link" href="collection.html">Мои билеты (Корзина)</a></li>
+                <li class="nav__item"><a class="nav__link" href="checkout.html">Оформление заказа</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Основной уникальный контент -->
-    <main>
-        <section>
-            <h2>Добро пожаловать!</h2>
-            <p>Наш сервис предлагает самый быстрый и удобный способ приобрести билеты на мероприятия вашего города.</p>
+    <main class="main">
+        <!-- Блок: hero -->
+        <section class="hero">
+            <h2 class="hero__title">Добро пожаловать!</h2>
+            <p class="hero__text">Наш сервис предлагает самый быстрый и удобный способ приобрести билеты на мероприятия вашего города.</p>
         </section>
-        
-        <section>
-            <h2>Почему выбирают нас?</h2>
-            <!-- Независимые блоки контента -->
-            <article>
-                <h3>Официальные билеты</h3>
-                <p>Мы работаем напрямую с организаторами. Никаких наценок и перекупщиков.</p>
+
+        <!-- Блок: features -->
+        <section class="features">
+            <h2 class="features__title">Почему выбирают нас?</h2>
+
+            <article class="feature-card">
+                <h3 class="feature-card__title">Официальные билеты</h3>
+                <p class="feature-card__text">Мы работаем напрямую с организаторами. Никаких наценок и перекупщиков.</p>
             </article>
-            <article>
-                <h3>Мгновенная доставка</h3>
-                <p>Электронный билет придет на вашу почту сразу после оплаты.</p>
+
+            <article class="feature-card">
+                <h3 class="feature-card__title">Мгновенная доставка</h3>
+                <p class="feature-card__text">Электронный билет придет на вашу почту сразу после оплаты.</p>
             </article>
         </section>
 
-        <!-- Дополнительная информация, сайдбар -->
-        <aside>
-            <h3>Новости сервиса</h3>
-            <p>Скидка 10% на все рок-концерты до конца месяца!</p>
+        <!-- Блок: news -->
+        <aside class="news">
+            <h3 class="news__title">Новости сервиса</h3>
+            <p class="news__text">Скидка 10% на все рок-концерты до конца месяца!</p>
         </aside>
     </main>
 
-    <!-- Подвал страницы -->
-    <footer>
-        <p>&copy; 2026 TicketShow. Все права защищены. Служба поддержки: support@ticketshow.ru</p>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2026 TicketShow. Все права защищены. Служба поддержки: support@ticketshow.ru</p>
     </footer>
 </body>
 </html>
